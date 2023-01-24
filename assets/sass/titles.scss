@@ -1,0 +1,41 @@
+@import "variables";
+
+.heading-l {
+  font-family: $base-font-inter;
+  font-size: $fs-heading-l;
+  font-weight: $fw-heading-l;
+  line-height: $lh-heading-l;
+  color: $black-700;
+}
+
+.heading-m {
+  font-family: $base-font-inter, $base-font-lora, $base-font-inconsolata;
+  font-size: $fs-heading-m;
+  font-weight: $fw-heading-m;
+  line-height: $lh-heading-m;
+  color: $black-700;
+}
+
+.heading-s {
+  font-family: $base-font-inter, $base-font-lora, $base-font-inconsolata;
+  font-size: $fs-heading-s;
+  font-weight: $fw-heading-s;
+  line-height: $lh-heading-s;
+  color: $black-700;
+}
+
+.body-m {
+  font-family: $base-font-inter, $base-font-lora, $base-font-inconsolata;
+  font-size: $fs-body-m;
+  font-weight: $fw-body-m;
+  line-height: $lh-body-m;
+  color: $black-700;
+}
+
+.body-s {
+  font-family: $base-font-inter, $base-font-lora, $base-font-inconsolata;
+  font-size: $fs-body-s;
+  font-weight: $fw-body-s;
+  line-height: $lh-body-s;
+  color: $black-700;
+}

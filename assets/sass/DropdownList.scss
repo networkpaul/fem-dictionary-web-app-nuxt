@@ -1,0 +1,75 @@
+@import "variables";
+@import "titles";
+
+.font-choice {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+
+  .font-choiceArrow {
+    @extend .body-m;
+
+    padding: 10px;
+    font-weight: $dropdown-fw;
+    border: none;
+    width: 150px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    background-image: url('@/assets/images/icon-arrow-down.svg');
+    background-size: 1em;
+    background-position: calc(100% - 1.3em) center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  .font-dropdownList {
+    position: absolute;
+    left: -50px;
+    padding: 24px;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    z-index: 999;
+  }
+}
+
+.sansSerif {
+  @extend .body-m;
+
+  font-family: $base-font-inter;
+  font-weight: $dropdown-fw;
+
+  &:hover {
+    color: $accent-01;
+    cursor: pointer;
+  }
+}
+
+.serif {
+  @extend .body-m;
+
+  font-family: $base-font-lora !important;
+  font-weight: $dropdown-fw !important;
+
+  &:hover {
+    color: $accent-01;
+    cursor: pointer;
+  }
+}
+
+.mono {
+  @extend .body-m;
+
+  font-family: $base-font-inconsolata !important;
+  font-weight: $dropdown-fw !important;
+
+  &:hover {
+    color: $accent-01;
+    cursor: pointer;
+  }
+}

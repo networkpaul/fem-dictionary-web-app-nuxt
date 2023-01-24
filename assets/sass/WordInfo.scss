@@ -1,0 +1,171 @@
+@import "variables";
+@import "titles";
+
+.wordInfo {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+
+  .wordInfo-word {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .word-word {
+      display: flex;
+      flex-direction: column;
+
+      .word-prim {
+        @extend .heading-l;
+        font-family: $base-font-inter-bold;
+      }
+
+      .word-pronunciation {
+        @extend .heading-m;
+        color: $accent-01;
+      }
+    }
+
+    .word-play {
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .wordInfo-definition {
+    margin: 20px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+
+    .word-section {
+      @extend .heading-m;
+
+      margin-bottom: 40px;
+      font-family: $base-font-inter-bold;
+      font-style: italic;
+      display: flex;
+      align-items: center;
+
+      &::after {
+        content: '';
+        display: block;
+        margin-left: 20px;
+        height: 1px;
+        width: 100%;
+        background-color: $white-300;
+      }
+    }
+
+    .word-meaning {
+      display: flex;
+      flex-direction: column;
+
+      h4 {
+        @extend .heading-m;
+
+        margin-bottom: 25px;
+        color: $black-500;
+      }
+
+      ul {
+        @extend .body-m;
+
+        margin-bottom: 40px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        li::before {
+          content: "\2022";
+          color: $accent-01;
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+          margin-right: 1em;
+        }
+      }
+
+      .word-synonyms {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        h4 {
+          @extend .heading-m;
+          margin: 0;
+        }
+
+        h5 {
+          @extend .heading-s;
+          margin: 0;
+          font-family: $base-font-inter-bold;
+          color: $accent-01;
+
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .word-example {
+        @extend .body-m;
+        padding-left: 70px;
+        color: $black-500;
+      }
+    }
+  }
+
+  .wordInfo-source {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: $white-300;
+    }
+
+    .wordInfo-sourceText {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      h6 {
+        @extend .body-s;
+        margin: 0;
+
+        &::after {
+          content: '';
+          display: block;
+          height: 1px;
+          width: 100%;
+          background-color: $white-300;
+        }
+      }
+
+      a {
+        @extend .body-s;
+        text-decoration: none;
+
+        &::after {
+          content: '';
+          display: block;
+          height: 1px;
+          width: 100%;
+          background-color: $white-300;
+        }
+      }
+
+      svg {
+        margin-left: 10px;
+      }
+    }
+  }
+}

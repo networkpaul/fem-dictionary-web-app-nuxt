@@ -1,0 +1,62 @@
+@import "variables";
+@import "titles";
+
+.search-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  form {
+    position: relative;
+  }
+}
+
+.search-label {
+  @extend .heading-s;
+  font-weight: $input-fw;
+
+  padding: 20px 24px;
+  height: 64px;
+  width: 100%;
+  background-color: $white-200;
+  border: none;
+  border-radius: 16px;
+
+  &:focus {
+    outline: 1px solid $accent-01;
+  }
+
+  &::placeholder {
+    @extend .heading-s;
+    font-weight: $input-fw;
+    color: $black-700;
+    opacity: 0.25;
+  }
+}
+
+.search-button {
+  margin-top: 4px;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  background-image: url("/images/icon-search.svg");
+  background-size: 1.5em;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+}
+
+.search-label.is-invalid {
+  outline: 1px solid $accent-02;
+}
+
+.search-error {
+  @extend .heading-s;
+
+  color: $accent-02;
+}
